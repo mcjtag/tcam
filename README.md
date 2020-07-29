@@ -4,7 +4,7 @@ TCAM ( Ternary Content-Addressable Memory) on Verilog.
 ## Specifications
 * Index table implemented on distributed memory (registers)
 * Data table implemented on Simple Dual Port Memory (distributed or block)
-* Set/Clear latency: 0
+* Set/Clear latency: 1
 * Request latency: 3
 
 ## Parameters:
