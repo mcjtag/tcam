@@ -32,5 +32,27 @@ TCAM ( Ternary Content-Addressable Memory) on Verilog.
 * `res_valid` - Output Valid flag for Request operation
 * `res_null`  - Output Null flag for Request operation ('not found')
 
-## Example
+## Example Timings
 ![TCAM](/img/timings.gif)
+
+Example timing diagram contains 4 stages:
+* Set stage: fills TCAM with data and masks
+* Success request stage: requests data by key
+* Clear stage: clears data with address <0x1>
+* Failed request stage: no correct data in TCAM (res_null signal is ACTIVE)
+
+## Structure
+### Top
+![Top Structure](/img/structure_top.gif)
+
+Description:
+* line_array - array of lines, each line contains registered memory (keys and masks) and matching logic
+* line_encoder - converts input line match signals to corresponding addresses sequentially
+* ram - random access memory containing data
+
+### Line
+![Line Structure](/img/structure_line.gif)
+
+Description:
+
+Each key and mask are contained in the registered memory. This circumstance allows implement parallel matching logic. The output match signal is comparison of zero with results of XOR functions of a buffered key, an input request key and an inverted buffered mask.
