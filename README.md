@@ -55,4 +55,4 @@ Description:
 
 Description:
 
-Each key and mask are contained in the registered memory. This circumstance allows implement parallel matching logic. The output match signal is comparison of zero with results of XOR functions of a buffered key, an input request key and an inverted buffered mask.
+Each key and mask are contained in the registered memory. This circumstance allows implement parallel matching logic. The output match signal is comparison of zero with results of function: "buffered key" XOR "input request key" AND "inverted buffered mask".
