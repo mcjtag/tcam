@@ -1,5 +1,5 @@
 # tcam
-TCAM ( Ternary Content-Addressable Memory) on Verilog.
+TCAM (Ternary Content-Addressable Memory) in Verilog.
 
 ## Specifications
 * Index table implemented on distributed memory (registers)
